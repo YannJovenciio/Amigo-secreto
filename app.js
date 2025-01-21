@@ -19,20 +19,29 @@ function adicionarAmigo() {
         listaAmigo.push(nome);
         console.log(listaAmigo)
     }
- 
-    console.log("Nome do amigo: " + nome);
     
     LimparCampo();
-    mostrarLista();
+    mostrarL();
 }
 
-function mostrarLista(){
-    ExibirTexto('ul',listaAmigo);
-    for (let i = 0; i < listaAmigo.length; i++) {
-        console.log(listaAmigo[i]);
-    }
 
+const listaLI = document.getElementById('listaAmigos')
+
+1
+
+function mostrarL() {
+    let listaLI = document.getElementById('listaAmigos')
+
+    listaLI.innerHTML = "";
+    listaAmigo.forEach(function(valor) {
+        let li = document.createElement('li');
+        li.textContent = valor;
+        listaLI.appendChild(li);
+    })
 }
+
+
+
 function LimparCampo() {
     nome = document.getElementById('amigo');
     nome.value = '';
