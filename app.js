@@ -19,12 +19,9 @@ function adicionarAmigo() {
         listaAmigo.push(nome);
         console.log(listaAmigo)
     }
-
-
-        
+ 
     console.log("Nome do amigo: " + nome);
     
-
     LimparCampo();
     mostrarLista();
 }
@@ -42,17 +39,18 @@ function LimparCampo() {
 }
 
 function Sort(lista){
-    let amigoSorteado = Math.floor(Math.random() * listaAmigo.length);
-    return listaAmigo[amigoSorteado];
+    let amigoSorteado = Math.floor(Math.random() * lista.length);
+    return lista[amigoSorteado];
 
 }
+
 
 function sortearAmigo() {
     let sorteada = Sort(listaAmigo)
     console.log("Amigo sorteado",sorteada)
 
     let result = document.getElementById("resultado");
-    result.innerHTML = "nome";
+    result.innerHTML = `O amigo sorteado é ${sorteada}!!`;
 
 }
 
