@@ -1,5 +1,6 @@
 //O principal objetivo deste desafio é fortalecer suas habilidades em lógica de programação. Aqui você deverá desenvolver a lógica para resolver o problema.
-let listaAmigo = []
+let listaAmigo = [];
+let amigoSorteado = [];
 
 function ExibirTexto(tag,texto) {
     let campo = document.querySelector(tag);
@@ -28,8 +29,6 @@ function adicionarAmigo() {
     mostrarLista();
 }
 
-
-
 function mostrarLista(){
     ExibirTexto('ul',listaAmigo);
     for (let i = 0; i < listaAmigo.length; i++) {
@@ -42,20 +41,19 @@ function LimparCampo() {
     nome.value = '';
 }
 
-
-
-
-
-
-
-
-
-//cars.sort()   // Sorts the array
-
-
-function sortaAmigo() {
-    
-    let result = document.getElementById("resultado")
-    result.innerHTML = 'eaeew'
+function Sort(lista){
+    let amigoSorteado = Math.floor(Math.random() * listaAmigo.length);
+    return listaAmigo[amigoSorteado];
 
 }
+
+function sortearAmigo() {
+    let sorteada = Sort(listaAmigo)
+    console.log("Amigo sorteado",sorteada)
+
+    let result = document.getElementById("resultado");
+    result.innerHTML = "nome";
+
+}
+
+
