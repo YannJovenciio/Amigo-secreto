@@ -1,24 +1,21 @@
 //O principal objetivo deste desafio é fortalecer suas habilidades em lógica de programação. Aqui você deverá desenvolver a lógica para resolver o problema.
 let listaAmigo = []
+
 function ExibirTexto(tag,texto) {
     let campo = document.querySelector(tag);
     campo.innerHTML = texto
 }
 
-
 function adicionarAmigo() {
-
-
     let campoNome = document.getElementById('amigo').value;
     nome = campoNome
 
     if(nome == ""){
         alert("Insira um nome")
     }
-
+    
     if (nome) {
         listaAmigo.push(nome);
-
         console.log(listaAmigo)
     }
 
@@ -57,5 +54,8 @@ function LimparCampo() {
 
 
 function sortaAmigo() {
+    
+    let result = document.getElementById("resultado")
+    result.innerHTML = 'eaeew'
 
 }
